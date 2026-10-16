@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Hormones Project</title>
+<meta name="description" content="A KTH InspireLab project building an affordable, home-based optical system that measures six hormones in urine, every day.">
+<link rel="icon" href="inspirelab-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible+Next:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <a class="logo" href="https://www.kth.se/inspirelab" title="KTH InspireLab"><img src="inspirelab-logo.png" alt="KTH InspireLab" width="240" height="227"></a>
+      <a class="name" href="#top">The Hormones Project<small>A KTH InspireLab project</small></a>
+    </div>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#project">The project</a></li>
+        <li><a href="#how">How we work</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#join">Join us</a></li>
+        <li><a class="cta" href="#support">Support the project</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap grid">
+      <a class="part-of" href="https://www.kth.se/inspirelab"><img src="inspirelab-logo.png" alt="" width="240" height="227">KTH InspireLab · Home-based hormone diagnostics</a>
+      <h1>Women's health doesn't need more empathy. <span>It needs more engineering.</span></h1>
+      <p class="lede">We are building an affordable optical system that measures six hormones in urine, at home, every day. Urine instead of blood. Daily instead of a few times a year.</p>
+      <div class="btns">
+        <a class="btn solid" href="#project">The project</a>
+        <a class="btn" href="#join">Join us</a>
+      </div>
+      <figure class="chart" style="margin-inline:0">
+        <svg id="cycle" viewBox="0 0 800 270" role="img" aria-label="Illustrative hormone levels across a 28-day menstrual cycle, with clinic tests only on day 3 and day 21"></svg>
+        <figcaption class="legend">
+          <span><b style="background:var(--curve)"></b>Estradiol (illustrative)</span>
+          <span><b style="background:var(--light)"></b>LH (illustrative)</span>
+          <span><b style="background:var(--sample);height:9px;width:9px;border-radius:50%"></b>Typical clinic tests: day 3 and day 21</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section>
+    <div class="wrap">
+      <div class="two">
+        <div class="stack">
+          <div class="eyebrow">The problem</div>
+          <h2>Hormones change every day. We measure them a few times a year.</h2>
+          <p class="lede">Hormones shape metabolism, fertility, mood, sleep and cognition. Yet quantitative measurements still come from occasional blood tests in a clinic: a single snapshot of a system that never stands still.</p>
+          <p class="pull">What happens <em>between</em> the measurements?</p>
+        </div>
+        <div class="tubes" aria-label="Sample tubes across a 28-day cycle">
+          <div>
+            <div class="row-label"><span>Today: clinic blood tests</span><span>2 of 28 days</span></div>
+            <div class="row" id="row-clinic"></div>
+            <div class="days"><span>day 1</span><span>day 14</span><span>day 28</span></div>
+          </div>
+          <div>
+            <div class="row-label"><span>Our aim: home urine sampling</span><span>28 of 28 days</span></div>
+            <div class="row" id="row-home"></div>
+            <div class="days"><span>day 1</span><span>day 14</span><span>day 28</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div><span class="n">4–12 yrs</span><p>Typical delay before endometriosis is diagnosed.</p><span class="src">WHO 2023 · Becker et al., Lancet 2024</span></div>
+        <div><span class="n">1 in 6</span><p>People affected by infertility. Ovulation disorders cause about 40% of female cases.</p><span class="src">WHO 2023</span></div>
+        <div><span class="n">3–8%</span><p>Women living with PMDD, a severe, hormone-linked mood disorder.</p><span class="src">Critchley et al., Nat. Med. 2025</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT -->
+  <section id="project">
+    <div class="wrap">
+      <div class="stack">
+        <div class="eyebrow">The project</div>
+        <h2>A hormone lab on a kitchen counter.</h2>
+        <p class="lede">A non-invasive, reusable, home-based platform that turns an ordinary smartphone into a quantitative, multi-hormone analyser, at a price that does not exclude anyone.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Sample</h3><p>Urine, at home, in a reusable container. No needles, no consumable lock-in.</p></li>
+        <li><h3>Illuminate</h3><p>A miniature light source and the phone's own flash light up the sample.</p></li>
+        <li><h3>Detect</h3><p>A KTH-made spectrometer together with the smartphone camera reads the spectrum: pixels become data.</p></li>
+        <li><h3>Analyse</h3><p>AI compares each reading with the user's own baseline.</p></li>
+      </ol>
+      <div class="hormones" aria-label="Target hormones" style="margin-top:28px"><span>LH</span><span>FSH</span><span>Estrogen</span><span>Progesterone</span><span>Cortisol</span><span>Serotonin</span></div>
+
+      <div class="flow">
+        <div><span class="k">For each woman</span><h3>Her own hormone map</h3><p>Real concentrations, tracked daily, next to mood, sleep and pain. Earlier signals for PCOS, endometriosis, primary ovarian insufficiency and the transition into menopause.</p></div>
+        <div><span class="k">For research</span><h3>Data that doesn't exist yet</h3><p>Opt-in, anonymised uploads can build the first large longitudinal dataset of how hormones interact with health and well-being.</p></div>
+        <div><span class="k">For equality</span><h3>Affordable, everywhere</h3><p>Designed to be low-cost and easy to use, including in settings with limited access to specialist care.</p></div>
+      </div>
+
+      <div class="stack" style="margin-top:72px">
+        <div class="eyebrow">Research</div>
+        <h2>Three questions, asked together.</h2>
+      </div>
+      <div class="qs">
+        <div class="q">
+          <h3>What do we need to measure?</h3>
+          <p>The optical fingerprints of key hormones and their metabolites in urine, and the conditions that make them clearest.</p>
+          <div class="who">Protein science · hormone biology · bioanalytics</div>
+        </div>
+        <div class="q">
+          <h3>How can we measure it?</h3>
+          <p>A compact, high-resolution spectrometer built from fibre gratings and a phone camera, with a sample container designed for it.</p>
+          <div class="who">Photonics · fibre optics · spectroscopy · materials</div>
+        </div>
+        <div class="q">
+          <h3>What can the data tell us?</h3>
+          <p>Signal correction, validation against laboratory assays, and patterns that sparse measurements cannot show.</p>
+          <div class="who">Signal analysis · AI · longitudinal data</div>
+        </div>
+      </div>
+      <div class="facts">
+        <span><b>2026–2030</b> · four years</span>
+        <span>Funded by <b>KTH InspireLab</b></span>
+        <span>Applied Physics &amp; Protein Science, KTH</span>
+        <span>AlbaNova &amp; SciLifeLab</span>
+        <span>Clinical input from Karolinska Institutet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section id="how" class="dark">
+    <div class="wrap">
+      <div class="two">
+        <div class="stack">
+          <div class="eyebrow">How we work</div>
+          <h2>Different disciplines, <span>one problem.</span></h2>
+          <p>No single discipline can solve this alone. Photonics, hormone biology and data science meet in every decision we make.</p>
+        </div>
+        <div class="stack">
+          <h3>Inclusion and shared leadership are <em>our starting point, not our goal</em></h3>
+          <p>We don't treat inclusion and joint leadership as targets to reach later. They are where the project begins: not a policy added on top of the science, but how a project about gender equality has to be run.</p>
+          <p>If women's health needs more engineering, engineering needs more than one name at the top.</p>
+        </div>
+      </div>
+      <h3 style="margin-top:56px">What that means in practice</h3>
+      <ul class="practice">
+        <li><strong>Three PIs, one project</strong><span>Scientific decisions are taken jointly, every week.</span></li>
+        <li><strong>Shared supervision</strong><span>Students are co-supervised across disciplines.</span></li>
+        <li><strong>Transparent credit</strong><span>Authorship and attribution are distributed openly.</span></li>
+        <li><strong>Room for every voice</strong><span>"I don't know, can you explain?" is a normal part of how we work.</span></li>
+        <li><strong>Deliberate distribution of opportunities</strong><span>Talks, visibility and responsibility are shared on purpose.</span></li>
+        <li><strong>Women's data, governed by women</strong><span>Data sharing is opt-in, anonymised and secure.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section id="people">
+    <div class="wrap">
+      <div class="stack">
+        <div class="eyebrow">People</div>
+        <h2>Three PIs. Shared scientific leadership.</h2>
+      </div>
+      <div class="pis">
+        <article class="pi">
+          <span class="field">Photonics · materials · integration</span>
+          <h3>Carlota Canalias</h3>
+          <span class="dept">Professor, Department of Applied Physics, KTH</span>
+          <a class="profile" href="https://www.kth.se/profile/ccg">KTH profile →</a>
+        </article>
+        <article class="pi">
+          <span class="field">Fibre optics · spectrometer</span>
+          <h3>Michael Fokine</h3>
+          <span class="dept">Professor, Department of Applied Physics, KTH</span>
+          <a class="profile" href="https://www.kth.se/profile/fokine">KTH profile →</a>
+        </article>
+        <article class="pi">
+          <span class="field">Hormone biology · bioanalytics</span>
+          <h3>Cecilia Williams</h3>
+          <span class="dept">Professor, Department of Protein Science, KTH · SciLifeLab</span>
+          <a class="profile" href="https://www.kth.se/profile/cwil">KTH profile →</a>
+        </article>
+      </div>
+      <div class="team" aria-label="Team">
+        <span>PhD students</span><span>Master's students</span><span>Data science</span><span>Clinical advisers</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section id="join">
+    <div class="wrap">
+      <div class="stack">
+        <div class="eyebrow">Join us</div>
+        <h2>There are many questions we don't know how to answer yet. Come help us answer them.</h2>
+        <p class="lede">Physicist, biologist, engineer or data scientist: you belong here.</p>
+      </div>
+      <div class="join">
+        <div class="card">
+          <span class="status open">Open</span>
+          <h3>PhD position</h3>
+          <p>Hormone sensing between biophysics and biotechnology, supervised by all three PIs.</p>
+          <a class="btn solid" href="phd.html">Read the ad →</a>
+        </div>
+        <div class="card">
+          <span class="status open">Rolling</span>
+          <h3>Master's thesis projects</h3>
+          <p>For students in nanotechnology, applied physics or biomedicine. AI, physics or biomedicine, at AlbaNova or SciLifeLab.</p>
+          <a class="btn" href="master.html">See master's projects →</a>
+        </div>
+        <div class="card">
+          <span class="status">Open to enquiries</span>
+          <h3>Postdocs and researchers</h3>
+          <p>Bring your own fellowship idea and let's develop it together.</p>
+        </div>
+        <div class="card">
+          <span class="status">Open to enquiries</span>
+          <h3>Collaborate with us</h3>
+          <p>Clinicians, researchers, app developers and partners who share the goal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support">
+    <div class="wrap">
+      <div class="stack">
+        <div class="eyebrow">Support the project</div>
+        <h2>Help us answer questions conventional research cannot yet answer.</h2>
+        <p class="lede">Closing the women's health gap could add an estimated USD 1 trillion a year to the global economy by 2040 (McKinsey Health Institute &amp; World Economic Forum, 2024). The science behind it still has to be built.</p>
+      </div>
+      <div class="support">
+        <div><span class="n">People</span><p>More students and researchers across disciplines.</p></div>
+        <div><span class="n">Measurements</span><p>Technology that doesn't exist yet.</p></div>
+        <div><span class="n">Data</span><p>The first long-term, multi-hormone datasets.</p></div>
+        <div><span class="n">Ideas</span><p>Experiments too bold for ordinary grants.</p></div>
+      </div>
+      <div class="contact">
+        <span>Talk to us:</span>
+        <ul class="mails">
+          <li><span>Carlota Canalias</span><code>ccg@kth.se</code><button class="copy" type="button">Copy</button></li>
+          <li><span>Cecilia Williams</span><code>cwil@kth.se</code><button class="copy" type="button">Copy</button></li>
+          <li><span>Michael Fokine</span><code>fokine@kth.se</code><button class="copy" type="button">Copy</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>The Hormones Project · KTH Royal Institute of Technology, Stockholm</span>
+    <span>Part of <a href="https://www.kth.se/inspirelab">KTH InspireLab →</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Hero chart: illustrative, smooth hormone curves over a 28-day cycle
+  var svg=document.getElementById('cycle'), NS='http://www.w3.org/2000/svg';
+  var L=46,R=780,T=20,B=228;
+  var x=function(d){return L+(d-1)/27*(R-L)};
+  var y=function(v){return B-v*(B-T)};
+  var g=function(d,m,s){return Math.exp(-((d-m)*(d-m))/(2*s*s))};
+  var e2=function(d){return .12+.78*g(d,13,1.9)+.38*g(d,21,3)};
+  var lh=function(d){return .08+.86*g(d,14.2,.75)};
+  function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e}
+  function path(f){var s='';for(var d=1;d<=28.001;d+=.1){s+=(s?'L':'M')+x(d).toFixed(1)+' '+y(f(d)).toFixed(1)}return s}
+  [1,7,14,21,28].forEach(function(d){
+    el('line',{x1:x(d),x2:x(d),y1:T,y2:B,stroke:'var(--line)','stroke-width':1});
+    var t=el('text',{x:x(d),y:B+20,'text-anchor':'middle'});t.textContent='day '+d;
+  });
+  el('line',{x1:L,x2:R,y1:B,y2:B,stroke:'var(--muted)','stroke-width':1});
+  var yl=el('text',{x:L-8,y:T+4,'text-anchor':'end'});yl.textContent='high';
+  var y0=el('text',{x:L-8,y:B,'text-anchor':'end'});y0.textContent='low';
+  el('rect',{x:x(3),y:T,width:x(21)-x(3),height:B-T,fill:'var(--sample-soft)',opacity:.45});
+  var q=el('text',{x:(x(3)+x(21))/2,y:T+16,'text-anchor':'middle',style:'fill:var(--ink);font-size:12px'});q.textContent='18 days without data';
+  el('path',{d:path(lh),fill:'none',stroke:'var(--light)','stroke-width':2.2,'stroke-linecap':'round'});
+  el('path',{d:path(e2),fill:'none',stroke:'var(--curve)','stroke-width':3,'stroke-linecap':'round'});
+  [3,21].forEach(function(d){
+    el('circle',{cx:x(d),cy:y(e2(d)),r:7,fill:'var(--sample)',stroke:'var(--paper-2)','stroke-width':3});
+  });
+  [['follicular',7],['ovulation',14],['luteal',22]].forEach(function(p){var t=el('text',{x:x(p[1]),y:B+38,'text-anchor':'middle',style:'font-size:10px;letter-spacing:.08em'});t.textContent=p[0].toUpperCase()});
+  svg.setAttribute('viewBox','0 0 800 '+(B+46));
+
+  // Tubes
+  function fill(id,on){var r=document.getElementById(id);for(var d=1;d<=28;d++){var t=document.createElement('span');t.className='tube'+(on(d)?' on':'');t.title='day '+d;r.appendChild(t)}}
+  fill('row-clinic',function(d){return d===3||d===21});
+  fill('row-home',function(){return true});
+
+  // Copy email
+  document.querySelectorAll('.mails li').forEach(function(li){
+    var b=li.querySelector('.copy'),m=li.querySelector('code');
+    b.addEventListener('click',function(){
+      function sel(){var r=document.createRange();r.selectNodeContents(m);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy'}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(m.textContent).then(function(){b.textContent='Copied'},sel)}else sel();
+    });
+  });
+})();
+</script>
+</body>
+</html>
