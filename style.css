@@ -173,6 +173,7 @@ nav a.cta{color:var(--ink);border-bottom:2px solid var(--sample)}
 .ad aside dd{margin:4px 0 0}
 .tracks{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin:6px 0}
 @media(min-width:700px){.tracks{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:700px){.tracks.two{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .tracks div{border-top:3px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:6px}
 .tracks div:nth-child(1){border-color:var(--curve)} .tracks div:nth-child(2){border-color:var(--light)} .tracks div:nth-child(3){border-color:var(--sample)}
 .tracks p{font-size:.96rem;color:var(--muted)}
